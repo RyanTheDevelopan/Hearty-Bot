@@ -32,7 +32,7 @@ client.on('guildMemberAdd', member => {
     if (!channel) return;
     // Send the message, mentioning the member
     channel.send(`${member}`);
-    channel.sendFile("https://demirramon.com/gen/undertale_text_box.png?text=Hello%20there%2C%20welcome%20to%20color%3Dblue%20IT%20color%3Dred%20Ryan%27s%20color%3Dyellow%20Bots%20color%3Dwhite%20text%3Djoin%20.%20Hope%20you%20have%20a%20nice%20time%20here!&box=undertale&boxcolor=white&character=custom&url=https%3A%2F%2Fi.imgur.com%2FSEwdTjs.png&charcolor=white&font=determination&asterisk=true&mode=regular.png");
+    channel.sendFile("https://www.demirramon.com/gen/undertale_text_box.gif?text=Hello%20there%2C%20welcome%20to%20color%3Dpink%20WD%20Heartan%27s%20Bots%20color%3Dwhite%20text%3Djoin%20.%20Hope%20you%20have%20a%20good%20time%20here!&box=undertale&boxcolor=white&character=custom&url=https%3A%2F%2Fi.imgur.com%2FSEwdTjs.png&charcolor=white&font=earthbound&asterisk=true&mode=regular&animate=true.png");
 });
 
 
