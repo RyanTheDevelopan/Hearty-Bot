@@ -55,7 +55,7 @@ client.on('guildMemberAdd', member => {
 
 client.on('guildMemberAdd', member => {
     // Send the message to a designated channel on a server:
-    const channel = member.guild.channels.find(ch => ch.name === 'welcome');
+    const channel = member.guild.channels.find(ch => ch.name === 'hello-and-goodbye');
     // Do nothing if the channel wasn't found on this server
     if (!channel) return; 
     // Send the message, mentioning the member
@@ -91,7 +91,7 @@ client.on("guildMemberRemove", member => {
 });
 
 client.on("guildMemberRemove", member => {
-    const channel = member.guild.channels.find(ch => ch.name === 'welcome')
+    const channel = member.guild.channels.find(ch => ch.name === 'hello-and-goodbye')
     if (!channel) return;
     channel.send(`${member}`);
     channel.sendFile(`https://demirramon.com/gen/undertale_text_box.png?text=Goodbye%20fellow%20member.%20I%20wish%20you%20good%20luck%20on%20the%20surface.&box=undertale&boxcolor=white&character=custom&url=https%3A%2F%2Fi.imgur.com%2Fn1b2i5u.png&charcolor=white&font=determination&asterisk=true&mode=regular.png`);
