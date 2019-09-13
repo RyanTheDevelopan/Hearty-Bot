@@ -60,6 +60,16 @@ client.on('guildMemberAdd', member => {
 
 client.on('guildMemberAdd', member => {
     // Send the message to a designated channel on a server:
+    const channel = member.guild.channels.find(ch => ch.name === 'welcome');
+    // Do nothing if the channel wasn't found on this server
+    if (!channel) return; 
+    // Send the message, mentioning the member
+    channel.send(`${member}`);
+    channel.sendFile("https://demirramon.com/gen/undertale_text_box.png?text=Hello%20there%2C%20welcome%20to%20the%20color%3Dyellow%20Undertale%20ASK%2FRP%20Server%20color%3Dwhite%20text%3Djoin%20!%20Enjoy%20your%20stay!&box=undertale&boxcolor=white&character=custom&url=https%3A%2F%2Fi.imgur.com%2FSEwdTjs.png&charcolor=white&font=determination&asterisk=true&mode=regular.png");
+});
+
+client.on('guildMemberAdd', member => {
+    // Send the message to a designated channel on a server:
     const channel = member.guild.channels.find(ch => ch.name === 'joins-leaves');
     // Do nothing if the channel wasn't found on this server
     if (!channel) return; 
@@ -67,6 +77,8 @@ client.on('guildMemberAdd', member => {
     channel.send(`${member}`);
     channel.sendFile("https://demirramon.com/gen/undertale_text_box.png?text=Hello%20there%2C%20welcome%20to%20color%3Dred%20Game%20City%20color%3Dwhite%20text%3Djoin%20!%20Have%20a%20nice%20time%20here!&box=undertale&boxcolor=white&character=custom&url=https%3A%2F%2Fi.imgur.com%2FSEwdTjs.png&charcolor=white&font=determination&asterisk=true&mode=regular.png");
 });
+
+
 
 client.on("guildMemberRemove", member => {
     const channel = member.guild.channels.find(ch => ch.name === 'goodbye')
@@ -83,6 +95,13 @@ client.on("guildMemberRemove", member => {
     channel.sendFile(`https://demirramon.com/gen/undertale_text_box.png?text=Goodbye%20fellow%20member.%20I%20wish%20you%20good%20luck%20on%20the%20surface.&box=undertale&boxcolor=white&character=custom&url=https%3A%2F%2Fi.imgur.com%2Fn1b2i5u.png&charcolor=white&font=determination&asterisk=true&mode=regular.png`);
 });
 
+client.on("guildMemberRemove", member => {
+    const channel = member.guild.channels.find(ch => ch.name === 'welcome')
+    if (!channel) return;
+    channel.send(`${member}`);
+    channel.sendFile(`https://demirramon.com/gen/undertale_text_box.png?text=Goodbye%20fellow%20member.%20I%20wish%20you%20good%20luck%20on%20the%20surface.&box=undertale&boxcolor=white&character=custom&url=https%3A%2F%2Fi.imgur.com%2Fn1b2i5u.png&charcolor=white&font=determination&asterisk=true&mode=regular.png`);
+});
+ 
 client.on("guildMemberRemove", member => {
     const channel = member.guild.channels.find(ch => ch.name === 'joins-leaves')
     if (!channel) return;
